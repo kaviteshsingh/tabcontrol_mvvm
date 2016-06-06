@@ -7,7 +7,7 @@ using TabbedLayout.Commands;
 
 namespace TabbedLayout.ViewModels
 {
-	public class WorkspaceViewModel : ViewModelBase
+	public abstract class WorkspaceViewModel : ViewModelBase
 	{
 		private string _header;
 		public string Header

@@ -47,11 +47,6 @@ namespace TabbedLayout.ViewModels
             get { return _exitCommand ?? (_exitCommand = new DelegateCommand(() => Application.Current.Shutdown())); }
         }
 
-        private DelegateCommand _newWorkspaceCommand;
-        public ICommand NewWorkspaceCommand
-        {
-            get { return _newWorkspaceCommand ?? (_newWorkspaceCommand = new DelegateCommand(NewWorkspace)); }
-        }
 
         private DelegateCommand _newTabOneCommand;
         public ICommand NewTabOneCommand
@@ -75,13 +70,6 @@ namespace TabbedLayout.ViewModels
         private void NewTabTwo()
         {
             var workspace = new TabTwoViewModel { Header = "NewTab Two" };
-            Workspaces.Add(workspace);
-            SelectedIndex = Workspaces.IndexOf(workspace);
-        }
-
-        private void NewWorkspace()
-        {
-            var workspace = new WorkspaceViewModel { Header = "New Workspace" };
             Workspaces.Add(workspace);
             SelectedIndex = Workspaces.IndexOf(workspace);
         }

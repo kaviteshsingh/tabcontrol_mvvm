@@ -8,9 +8,9 @@
 	<Window.Resources>
 		<!-- Allows a KeyBinding to be associated with a command defined in the View Model  -->
 		<c:CommandReference x:Key="ExitCommandReference" Command="{Binding ExitCommand}" />
-		<DataTemplate DataType="{x:Type vm:WorkspaceViewModel}">
+		<!--<DataTemplate DataType="{x:Type vm:WorkspaceViewModel}">
 			<TextBlock Text="Hello to Tabbed Layout!" />
-		</DataTemplate>
+		</DataTemplate>-->
 
         <DataTemplate DataType="{x:Type vm:TabOneViewModel}">
             <vw:TabTypeOne />
@@ -24,15 +24,15 @@
 
 	<Window.InputBindings>
 		<KeyBinding Key="X" Modifiers="Control" Command="{StaticResource ExitCommandReference}" />
-		<KeyBinding Key="N" Modifiers="Control" Command="{Binding NewWorkspaceCommand}" />
+        <KeyBinding Key="O" Modifiers="Control" Command="{Binding NewTabOneCommand}" />
+        <KeyBinding Key="T" Modifiers="Control" Command="{Binding NewTabTwoCommand}" />
 		<KeyBinding Key="F4" Modifiers="Control" Command="{Binding CloseWorkspaceCommand}" />
 	</Window.InputBindings>
 
 	<DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">
-				<MenuItem Command="{Binding NewWorkspaceCommand}" Header="_New Tab" InputGestureText="Ctrl + N" />
-                <MenuItem Command="{Binding NewTabOneCommand}" Header="Tab _One" InputGestureText="Ctrl + O" />
+				<MenuItem Command="{Binding NewTabOneCommand}" Header="Tab _One" InputGestureText="Ctrl + O" />
                 <MenuItem Command="{Binding NewTabTwoCommand}" Header="Tab _Two" InputGestureText="Ctrl + T" />
 				<MenuItem Command="{Binding CloseWorkspaceCommand}" Header="_Close Tab" InputGestureText="Ctrl + F4" />
 				<MenuItem Command="{Binding ExitCommand}" Header="E_xit" InputGestureText="Ctrl + X" />
