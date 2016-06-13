@@ -1,8 +1,28 @@
 ﻿<Application x:Class="TabbedLayout.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:vm="clr-namespace:TabbedLayout.ViewModels" 
+             xmlns:vw="clr-namespace:TabbedLayout.Views"
     Startup="OnStartup">
     <Application.Resources>
-         
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Screens.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+        
+        <!--<DataTemplate DataType="{x:Type vm:TabOneViewModel}">
+            <vw:TabTypeOne />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:TabTwoViewModel}">
+            <vw:TabTypeTwo/>
+        </DataTemplate>-->    
+        
     </Application.Resources>
+
+
+
 </Application>

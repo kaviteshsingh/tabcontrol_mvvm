@@ -12,13 +12,13 @@
 			<TextBlock Text="Hello to Tabbed Layout!" />
 		</DataTemplate>-->
 
-        <DataTemplate DataType="{x:Type vm:TabOneViewModel}">
+        <!--<DataTemplate DataType="{x:Type vm:TabOneViewModel}">
             <vw:TabTypeOne />
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type vm:TabTwoViewModel}">
             <vw:TabTypeTwo/>
-        </DataTemplate>
+        </DataTemplate>-->
 
     </Window.Resources>
 
