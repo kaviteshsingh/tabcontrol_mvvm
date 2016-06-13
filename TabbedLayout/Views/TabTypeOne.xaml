@@ -3,11 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:TabbedLayout.ViewModels" 
+             xmlns:vw="clr-namespace:TabbedLayout.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBox>
-            TabTypeOne
-        </TextBox>
-    </Grid>
+
+    <!--<UserControl.DataContext>
+        <vm:TabOneViewModel></vm:TabOneViewModel>
+    </UserControl.DataContext>-->
+    
+    <UniformGrid Rows="5" Columns="2">
+        <TextBlock>Name</TextBlock>
+        <TextBox x:Name="tbName" Text="{Binding Path=CurrentUser.Name, Mode=TwoWay}"></TextBox>
+        <TextBlock>Name Error</TextBlock>
+        <TextBlock x:Name="tbNameError"></TextBlock>
+        <TextBlock Text="Email"></TextBlock>
+        <TextBox x:Name="tbEmail" Text="{Binding Path=CurrentUser.Email, Mode=TwoWay}"></TextBox>
+        <TextBlock>Email Error</TextBlock>
+        <TextBlock x:Name="tbEmailError"></TextBlock>
+        <Label/>
+        <Button x:Name="btEmail" Content="Submit" Command="{Binding CmdSubmit}"></Button>
+        
+    </UniformGrid>
 </UserControl>
