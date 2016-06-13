@@ -5,7 +5,11 @@
         xmlns:vw="clr-namespace:TabbedLayout.Views"
 	xmlns:c="clr-namespace:TabbedLayout.Commands" Title="Main Window" Height="600" Width="800" WindowStartupLocation="CenterScreen">
 
-	<Window.Resources>
+    <Window.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Window.DataContext>
+    
+    <Window.Resources>
 		<!-- Allows a KeyBinding to be associated with a command defined in the View Model  -->
         <c:CommandReference x:Key="ExitCommandReference" Command="{Binding ExitCommand}" />
     </Window.Resources>

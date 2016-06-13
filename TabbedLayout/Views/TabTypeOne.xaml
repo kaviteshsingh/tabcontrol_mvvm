@@ -6,7 +6,7 @@
              xmlns:vm="clr-namespace:TabbedLayout.ViewModels" 
              xmlns:vw="clr-namespace:TabbedLayout.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" >
 
     <!--<UserControl.DataContext>
         <vm:TabOneViewModel></vm:TabOneViewModel>
