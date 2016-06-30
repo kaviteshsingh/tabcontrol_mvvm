@@ -39,7 +39,7 @@ namespace TabbedLayout.ViewModels
         public TabOneViewModel()
         {
             CurrentUser = new Person();
-            CurrentUser.Name = "Kavitesh";
+            CurrentUser.Name = DateTime.Now.ToString();
         }
 
 
