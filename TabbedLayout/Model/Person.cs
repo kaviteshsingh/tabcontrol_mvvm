@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using TabbedLayout.Common;
+using TabbedLayout.Resources;
 
 namespace TabbedLayout.Model
 {
@@ -100,13 +101,12 @@ namespace TabbedLayout.Model
         {
             if (IsStringMissing(this.Email))
             {
-                //return Strings.Customer_Error_MissingEmail;
-                return "Missing Email";
+                return ErrorStrings.Email_Missing;
             }
             else if (!IsValidEmailAddress(this.Email))
             {
                 //return Strings.Customer_Error_InvalidEmail;
-                return "Invalid Email";
+                return ErrorStrings.Email_Invalid;
             }
             return null;
         }
