@@ -8,7 +8,7 @@
         
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Screens.xaml"/>
+                <ResourceDictionary Source="Resources/Screens.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         
