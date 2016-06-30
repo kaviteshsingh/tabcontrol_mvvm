@@ -18,10 +18,14 @@
         <TextBlock>Name Error</TextBlock>
         <TextBlock x:Name="tbNameError"></TextBlock>
         <TextBlock Text="Email"></TextBlock>
-        <TextBox x:Name="tbEmail" Text="{Binding Path=CurrentUser.Email, Mode=TwoWay}"></TextBox>
+
+        <TextBox x:Name="tbEmail" Text="{Binding Path=CurrentUser.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  ></TextBox>
         <TextBlock>Email Error</TextBlock>
-        <TextBlock x:Name="tbEmailError"></TextBlock>
+
+        <TextBlock Foreground="Red" Text="{Binding ElementName=tbEmail, Path=(Validation.Errors).CurrentItem.ErrorContent}" />
+        
         <Label/>
+        
         <Button x:Name="btEmail" Content="Submit" Command="{Binding CmdSubmit}"></Button>
         
     </UniformGrid>

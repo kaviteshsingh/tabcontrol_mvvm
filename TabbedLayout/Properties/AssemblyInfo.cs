@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("TabbedLayout")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Kavitesh Singh")]
 [assembly: AssemblyProduct("TabbedLayout")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("Copyright © Kavitesh Singh 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
